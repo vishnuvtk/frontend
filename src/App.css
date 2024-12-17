@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,10 +8,10 @@ body {
 }
 
 .App {
-  max-width: 800px;
+  max-width: 900px;
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -18,23 +19,34 @@ body {
 h1 {
   text-align: center;
   color: #007bff;
+  margin-bottom: 20px;
 }
 
+/* Form Container */
 .form-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 label {
   font-weight: bold;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 button {
@@ -42,27 +54,92 @@ button {
   border: none;
   background: #007bff;
   color: #fff;
+  font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background: #0056b3;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+/* Flight Results Section */
+.flights-container {
   margin-top: 20px;
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+.flights-container h2 {
   text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Flight Details Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
 }
 
 th {
   background: #007bff;
   color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
+
+/* Flight Results Info */
+p {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+      padding: 10px;
+  }
+
+  table {
+      font-size: 12px;
+  }
+
+  button {
+      font-size: 14px;
+  }
 }
